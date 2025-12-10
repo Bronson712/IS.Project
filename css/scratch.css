@@ -1,0 +1,111 @@
+/* Custom styles for the scratch page */
+:root {
+    --ink: #0f172a;
+    --accent: #8b5cf6;
+    --paper: #f8fafc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--ink);
+    /* simpler single-path background; file must be at /images/snow.picture.jpg relative to site root */
+    background: url("/images/snow.picture.jpg") center/cover fixed no-repeat;
+    background-color: #e2e8f0;
+}
+
+.top-bar {
+    background: rgba(15, 23, 42, 0.9);
+    color: #fff;
+    padding: 12px 18px;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+.top-bar a {
+    color: #f8fafc;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: 600;
+}
+
+.page-header {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px auto;
+    padding: 24px;
+    max-width: 1100px;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(2px);
+}
+
+.page-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr; /* widen main column to fill space previously used by the app embed */
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    padding: 0 16px;
+}
+
+.col {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(2px);
+}
+
+.col h2, .col h3 {
+    margin-top: 0;
+    color: var(--accent);
+    font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+}
+
+.profile {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.video-wrap, .tableau-wrap, #game-embed {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrap iframe, .tableau-wrap iframe, #game-embed iframe {
+    display: block;
+    width: 100%;
+}
+
+.page-footer {
+    text-align: center;
+    padding: 20px;
+    color: #0f172a;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 -6px 16px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 960px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+}
